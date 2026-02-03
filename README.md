@@ -55,21 +55,17 @@ Then edit `.env` and add your API key:
 ```env
 # Google Gemini API Configuration
 GEMINI_API_KEY=your-actual-gemini-api-key-here
-GEMINI_MODEL=gemini-2.0-flash-exp
+GEMINI_MODEL=gemini-3-flash-preview
 
 # Flask Configuration
-FLASK_SECRET_KEY=a3f8d9c2b1e4f7a8c5d2e9f1b4a7c8d2e5f9a1b4c7d8e2f5a9b1c4d7e8f2a5b9
+FLASK_SECRET_KEY=your-secret-key-here
 FLASK_DEBUG=True
 FLASK_HOST=0.0.0.0
-FLASK_PORT=5000
+FLASK_PORT=5002
 ```
 
 **Get your Gemini API key from:** [Google AI Studio](https://aistudio.google.com/app/apikey)
 
-**Available Gemini models:**
-- `gemini-2.0-flash-exp` - Fast, efficient (recommended)
-- `gemini-1.5-pro` - More capable, slower
-- `gemini-1.5-flash` - Balance of speed and capability
 
 ### 4. Run the Application
 
@@ -77,7 +73,7 @@ FLASK_PORT=5000
 python app.py
 ```
 
-The application will be available at `http://localhost:5000`
+The application will be available at `http://localhost:5002`
 
 ## Usage
 
@@ -182,31 +178,7 @@ Example:
 6. **Visualization**: Results are analyzed and visualized when appropriate
 7. **Session Management**: Chat history is stored in Flask sessions
 
-## Configuration
-
-All configuration is managed through the `.env` file:
-
-### Change Gemini Model
-
-Edit `.env`:
-```env
-GEMINI_MODEL=gemini-1.5-pro
-```
-
-Available models:
-- `gemini-2.0-flash-exp` - Fast, efficient (recommended)
-- `gemini-1.5-pro` - More capable, slower
-- `gemini-1.5-flash` - Balance of speed and capability
-
-### Change Flask Settings
-
-Edit `.env`:
-```env
-FLASK_DEBUG=False          # Set to False for production
-FLASK_HOST=127.0.0.1      # Localhost only
-FLASK_PORT=8080           # Custom port
-FLASK_SECRET_KEY=your-secret-key-here
-```
+ 
 
 ## Troubleshooting
 
